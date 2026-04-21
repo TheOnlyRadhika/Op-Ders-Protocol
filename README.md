@@ -1,66 +1,23 @@
-## Foundry
+# Credit-Backed Options Protocol
 
-**Foundry is a blazing fast, portable and modular toolkit for Ethereum application development written in Rust.**
+A decentralized options trading protocol with integrated credit scoring and under-collateralized lending. Users can write options with reduced collateral requirements based on their creditworthiness, enabling more capital-efficient trading.
 
-Foundry consists of:
+## 🎯 Problem Statement
 
-- **Forge**: Ethereum testing framework (like Truffle, Hardhat and DappTools).
-- **Cast**: Swiss army knife for interacting with EVM smart contracts, sending transactions and getting chain data.
-- **Anvil**: Local Ethereum node, akin to Ganache, Hardhat Network.
-- **Chisel**: Fast, utilitarian, and verbose solidity REPL.
+Traditional options markets require **100% collateral upfront**, limiting access and capital efficiency:
+- High collateral requirements lock up capital
+- Creditworthy traders cannot leverage their track record
+- No incentive mechanism for responsible borrowing behavior
+- Market inefficiencies due to inflexible collateral requirements
 
-## Documentation
+**Our Solution:** A credit-score-backed system that:
+- Allows under-collateralized options based on credit history
+- Dynamically adjusts collateral requirements (25%-100%) based on creditworthiness
+- Tracks lending behavior to build verifiable on-chain credit
+- Integrates lending pools for missing collateral (credit-backed borrowing)
 
-https://book.getfoundry.sh/
+---
 
-## Usage
+## 🏗️ Protocol Architecture
 
-### Build
-
-```shell
-$ forge build
-```
-
-### Test
-
-```shell
-$ forge test
-```
-
-### Format
-
-```shell
-$ forge fmt
-```
-
-### Gas Snapshots
-
-```shell
-$ forge snapshot
-```
-
-### Anvil
-
-```shell
-$ anvil
-```
-
-### Deploy
-
-```shell
-$ forge script script/Counter.s.sol:CounterScript --rpc-url <your_rpc_url> --private-key <your_private_key>
-```
-
-### Cast
-
-```shell
-$ cast <subcommand>
-```
-
-### Help
-
-```shell
-$ forge --help
-$ anvil --help
-$ cast --help
-```
+### System Components
