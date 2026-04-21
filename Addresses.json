@@ -1,9 +1,0 @@
-{
-    "sepolia": {
-        "creditScoring": "0xAFE441db95Ab9B1889fF613B9B605Bc3C8Ee4d17",
-        "lendingPool": "0x2bB0A9806fE271613c47Bf1b240caad7eA8dc629",
-        "options": "0x123cAF28b8fb08e03904A9641060B89110410B44",
-        "usdc": "0x07865c6E87B9F70255377e024ace6630C1Eaa37F",
-        "deployedAt": "2024-01-01T00:00:00Z"
-    }
-}
