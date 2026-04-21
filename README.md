@@ -73,8 +73,8 @@ A user who defaults is **permanently locked** from writing options (`lockedUntil
  ### Installation
  
 ```bash
-git clone https://github.com/your-username/defi-credit-protocol.git
-cd defi-credit-protocol
+git clone https://github.com/TheOnlyRadhika/Op-Ders-Protocol.git
+cd OpDer-protocol
 npm install
 ```
  
