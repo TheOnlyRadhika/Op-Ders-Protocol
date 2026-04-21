@@ -27,6 +27,7 @@
 **/.env.production.local
 **/*.private_key
 **/mnemonics.txt
+OptionDers/
 
 # --- Logs & Debugging ---
 **/npm-debug.log*
