@@ -18,7 +18,7 @@ Traditional options markets require **100% collateral upfront**, limiting access
 
 ---
 
-## 🏗️ Protocol Architecture
+##  Protocol Architecture
 
 ### System Components
 ```
@@ -69,6 +69,10 @@ A user who defaults is **permanently locked** from writing options (`lockedUntil
 ### Prerequisites
  
 - Node.js ≥ 18
+- Solidity ^0.8.20
+- OpenZeppelin Contracts
+- ERC-20 stablecoin (USDC, USDT, DAI)
+- ERC-20 underlying token (WETH, etc.)
   
  ### Installation
  
@@ -88,4 +92,42 @@ The contracts have dependencies — deploy in this exact order:
 3. Options      (needs CreditScoring + LendingPool + underlyingToken + stablecoin addresses)
 ```
 
+## 🚀 Running Both Frontend & Backend Together
 
+### Option 1: Separate Terminal Windows
+
+**Terminal 1 - Backend**
+
+```bash
+cd backend
+npm run dev
+```
+Server running on http://localhost:5000
+
+** Terminal 2 - Frontend
+```bash
+cd frontend
+npm run dev
+```
+App running on http://localhost:3000
+
+### Option 2: Option 2: Using concurrently (Recommended)
+
+Install concurrently in root directory:
+```bash
+npm install concurrently
+```
+Add to root package.json:
+```bash
+{
+  "scripts": {
+    "dev": "concurrently \"npm run dev:backend\" \"npm run dev:frontend\"",
+    "dev:backend": "cd backend && npm run dev",
+    "dev:frontend": "cd frontend && npm start"
+  }
+}
+```
+Then run both together:
+```bash
+npm run dev
+```
